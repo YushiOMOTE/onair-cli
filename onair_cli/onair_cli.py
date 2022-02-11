@@ -26,7 +26,10 @@ def update():
     onair = detect()
     headers = {"content-type": "application/json"}
     data = {"onair": onair}
-    res = requests.post(ENDPOINT, headers=headers, data=json.dumps(data))
+    try:
+        res = requests.post(ENDPOINT, headers=headers, data=json.dumps(data))
+    except Exception as e:
+        print(e)
     # print(res.json())
 
 
