@@ -27,7 +27,7 @@ def update():
     headers = {"content-type": "application/json"}
     data = {"onair": onair}
     res = requests.post(ENDPOINT, headers=headers, data=json.dumps(data))
-    print(res.json())
+    # print(res.json())
 
 
 while True:
